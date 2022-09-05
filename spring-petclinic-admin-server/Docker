@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} spring-petclinic-admin-server-2.6.7.jar
-ENTRYPOINT ["java","-jar","/spring-petclinic-admin-server-2.6.7.jar.jar"]
+FROM openjdk:11
+ADD target/spring-petclinic-admin-server-2.6.7.jar spring-petclinic-admin-server-2.6.7.jar
+EXPOSE 8085
+ENTRYPOINT ["java","-jar","spring-petclinic-admin-server-2.6.7.jar."]
